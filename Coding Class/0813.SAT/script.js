@@ -36,7 +36,7 @@ fetch("http://hp-api.herokuapp.com/api/characters")
           <p>House: ${character.house}</p>
         </div>
       `;
-      ul.appendChild(li);
+      // ul.appendChild(li);
     });
   })
   .catch((e) => console.error(e.message));
@@ -51,7 +51,8 @@ fetch("http://hp-api.herokuapp.com/api/characters")
 
 ///////////////////////////
 
-const button = document.querySelector(".container button");
+/////////first  button//////
+const button = document.getElementById("RJOD");
 const jokeText = document.querySelector(".container p");
 document.addEventListener("DOMContentLoaded", getJoke); //this brings in the joke when you immediately load the content
 
@@ -70,15 +71,17 @@ async function getJoke() {
   jokeText.innerHTML = jokeObj.joke;
 }
 
+/////second button////
+const dailyButton = document.getElementById("dailyButton");
 const base_url = "https://api.jokes.one";
 
-button.addEventListener("click", () => {
+dailyButton.addEventListener("click", () => {
   fetch(base_url + "/jod")
     .then((res) => res.json())
     .then((data) => {
       const joke = data.contents.jokes[0].joke;
       console.log(joke);
-      const display = document.getElementById("joke");
+      const display = document.getElementById("daily2");
       display.innerHTML = joke.text;
     })
     .catch((e) => console.error(e.message));
@@ -122,3 +125,4 @@ button.addEventListener("click", () => {
 when you click a button 
 - make an API request w/ fetch
 - render the API request information to a page 
+*/
