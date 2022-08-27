@@ -19,15 +19,13 @@ let NameArray = [
   "GermanyVillage",
 ];
 
-// console.log(Math.random()); // check if math is working
-///requirements for the alienships
 class AlienShipClass {
   //class to make objects. capitalized class. "skeleton"
   constructor(alienName) {
     //constructor takes in information
     this.name = alienName; // alienName is representation of data to be determined untill "called"
     this.hull = Math.floor(Math.random() * 4) + 3; //4 values so thats why 4 then it starts at 3
-    this.firepower = Math.floor(Math.random() * 3) + 2; //we need to import the math module
+    this.firepower = Math.floor(Math.random() * 3) + 2;
     this.accuracy = (Math.floor(Math.random() * 3) + 6) / 10; //3 values that are available but we start at 6 so +6 then /10 because its decimal .6
   }
 }
@@ -36,10 +34,10 @@ class AlienShipClass {
 // const testAlienShip = new alienShip (alienNameArray[1])
 // const testAlienShip = new alienShip (alienNameArray[2])
 
-const fleetArray = []; //every time we create a new alienship it WILL push that name here. READING TOP DOWN. // a containter for the obj.
+const fleetArray = []; //every time i create a new alienship it WILL push that name here. READING TOP DOWN. // a containter for the obj.
 for (let i = 0; i < NameArray.length; i++) {
   // then loops
-  let newAlien = new AlienShipClass(NameArray[i]); // we're calling it TO MAKE ALIEN SHIPS
+  let newAlien = new AlienShipClass(NameArray[i]); //calling it TO MAKE ALIEN SHIPS
   fleetArray.push(newAlien); // TELLING THE NEW SHIPS TO BE PART OF fleetArray
   // need to store this information we created
 }
@@ -54,10 +52,8 @@ if attacks you //if e
 you survive and attack until hull <= 0
 or you die and lose game
 if it dies - you go to next round
--- accuracy of 0-1
--- <=0.8 attack successful
---- > 0.8 attack = miss
 */
+
 function spaceFight() {
   for (let i = 0; i < fleetArray.length; i++) {
     //entire loop keep going until length then stop
