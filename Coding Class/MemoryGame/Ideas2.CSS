@@ -1,0 +1,38 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  /* takes 100% of the height space*/
+  background-color: rgb(184, 192, 114);
+}
+
+.game-Block {
+  /*https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout */
+  /*this is the 'section' within HTML
+  height: 650px;
+  width: 650px;
+  display: wrap;
+  flex-wrap: wrap;
+  display: grid; */
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px; /* by 4*/
+  grid-template-rows: 225px 225px 225px; /* by 3*/
+  justify-content: center;
+  border: 2px solid black;
+}
+
+img {
+  height: 200px; /*height of the images*/
+}
+
+.Memory-card {
+  position: relative;
+  border: 2px solid black;
+}
+
+text {
+  position: center;
+}

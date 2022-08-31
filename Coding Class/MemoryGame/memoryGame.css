@@ -1,0 +1,59 @@
+/* (A) 3 COLUMNS PER ROW */
+body {
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 200;
+  color: rgba(56, 56, 56, 0.75);
+  overflow-x: hidden;
+  background-color: #54acff;
+  background-image: linear-gradient(
+    75deg,
+    #f8f3a8 0%,
+    hsl(274, 100%, 89%) 46%,
+    #f0f0f0 100%
+  );
+  overflow-y: hidden;
+}
+#grid {
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-gap: auto;
+  column-gap: 9px;
+  row-gap: 9px;
+  justify-content: center;
+  align-content: center;
+}
+/* (B) 1 COL ON SMALL SCREENS */
+@media screen and (max-width: 768px) {
+  #grid {
+    grid-template-columns: 100px 100px 100px;
+  }
+}
+/* (C) OPTIONAL FOR THE CELLS */
+.head,
+.cell {
+  width: 200px;
+  height: 250px;
+}
+/*.head {
+  font-weight: bold;
+  border: 1px solid #f18e8e;
+  background: #ffbfbf;
+}*/
+.cell {
+  border: 1px solid #c2ba3c;
+  background: #f8ffde;
+}
+
+button {
+  outline-color: #006d77;
+}
+
+h1 {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+p {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
