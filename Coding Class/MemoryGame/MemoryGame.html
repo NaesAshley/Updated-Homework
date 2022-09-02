@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="memoryGame.css" />
+    <title>Match The Cards Memory Game</title>
+  </head>
+  <section>
+    <h1>Match the Game!</h1>
+    <p>
+      Player 1 vs player 2. Let's see who can match the game the fastest!
+    </p>
+    <P>
+      <section>
+        <div class="flex-parent jc-center">
+          <div class="timeDisplay">
+          <h5><span class="minute" >00</span>
+          <span class="seconds">00</span></h5>
+          </div>  
+         
+        <button Class='navitem' ID="Player1">Player 1</button>  &nbsp
+        <br />
+        
+        <h5><span class="minute" >00</span>
+        <span class="seconds">00</span></h5>
+
+        <button Class='navitem' ID="Player2">Player 2</button>   &nbsp
+        <br />
+        <!--<button type="button" id="reset Button" onclick="resetFunction()">Reset The Game</button> -->
+        <button Class='navitem' onclick="location.reload();">New Game</button>
+        <br />
+      </div>
+      </section>
+    </P>
+  </section>
+  <div id="grid">
+    <div class="cell" id="divA"></div>
+    <div class="cell" id="divB"></div>
+    <div class="cell" id="divC"></div>
+    <div class="cell" id="divC">Cell C</div>
+    <div class="cell" id="divD">Cell </div>
+    <div class="cell" id="divE">Cell </div>
+    <div class="cell" id="divF">Cell F</div>
+    <div class="cell" id="divG">Cell </div>
+    <div class="cell" id="divH">Cell </div> 
+    <div class="cell" id="divI">Cell I</div>
+    <div class="cell" id="divJ">Cell J</div>
+    <div class="cell" id="divK">Cell K</div>
+  </div>
+    <script src="./memoryGame.js"></script>
+    <script src="./MemoryGT.js"></script>
+  </body>
+</html>

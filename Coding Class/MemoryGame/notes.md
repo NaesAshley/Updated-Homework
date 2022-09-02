@@ -28,18 +28,29 @@ Questions:
 - how do i prompt the system to increase in level after first/second/third/etc. level?
 
 if 0 display this dom ----------------------------------------------------------
-google update - how to post img through js -- "how to update dom image with JS" --
-variable to hold the status flip or not 0 vs 1; true or false
-function to call when element is click -- function needs to check variable, if true then -- if else statement within the function -- if not display the other thing
 
-maybe try an array that holds the image -- that will populate the grid
+//////////////////display + flip
 
-- method that goes along with arrays that randomize
-- assign values associated with the grid
-- check positions within the array
-- if image is at indx 2 of array thats how i can check.
+- all cells must have the back facing card card
+- get images to display in cells
+- create a flip function between two images within 1 cell; true/false or 1&2
+- randomize the images across the cells
 
-- reset function - . reload -- reloading the page may be easiest?
-- player 1 and player 2 button score held in a variable with time.
+once complete
 
--
+////////////////registering the computer to know
+randomize so only 2 of the same image populates never 3,4, etc.
+when user clicks if it matches - leave facing image
+
+- if doesn't match turn back facing card
+- continue until all cards are matched
+- once matched
+
+///////////////Timer
+timer starts once "player 1/2" clicks, initiate count down
+when game is complete, stop the timer.
+
+- same timer per player - display
+- show who wins based on who completes the fastest
+
+///////////////reset button

@@ -24,16 +24,17 @@ body {
   align-content: center;
 }
 /* (B) 1 COL ON SMALL SCREENS */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   #grid {
     grid-template-columns: 100px 100px 100px;
   }
-}
+} */
 /* (C) OPTIONAL FOR THE CELLS */
-.head,
+
+.head,  /*may not need this .head*/
 .cell {
-  width: 200px;
-  height: 250px;
+  width: auto; /*adjusting the size of the cell only*/
+  height: auto;
 }
 /*.head {
   font-weight: bold;
@@ -56,4 +57,29 @@ h1 {
 p {
   text-align: center;
   color: rgba(0, 0, 0, 0.5);
+}
+
+img {
+  max-width: auto;
+  height: 250px;
+  max-height: 100%;
+}
+.navitem {
+  display: inline;
+  width: 70px;
+  height: 40px;
+  text-align: center;
+  border: gray;
+  background-color: #cc5e36;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.flex-parent {
+  display: flex;
+}
+
+.jc-center {
+  justify-content: center;
 }
