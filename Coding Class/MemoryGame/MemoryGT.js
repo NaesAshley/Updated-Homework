@@ -15,7 +15,7 @@
 // }, 1000);
 
 /////// time spans //////
-// let min = document.querySelector(".minutes");
+// let min = document.querySelector(".minutes");a
 // let sec = document.querySelector(".seconds");
 
 // //import buttons//
