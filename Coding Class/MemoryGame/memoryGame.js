@@ -46,23 +46,29 @@ for (let i = 0; i < cardDeck.length; i++) {
   imgBackCard.append(sameDog); //////this is for the backcard
 }
 
+let arrayofoptions = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6];
+// some way to randmize array
 let gobalflip = false;
 let grid = document.getElementById("grid");
 grid.addEventListener("click", (Event) => {
-  let isFliped = Event.path[0].class;
+  let isFliped = document.getElementById(Event.path[0].id);
+
   console.log(gobalflip);
   if (gobalflip == false) {
     console.log(Event.path[1].childNodes[0].id, Event);
     randomNum = getRandomNum();
     let imgTagToBeUpdated = document.getElementById(Event.path[0].id);
-    imgTagToBeUpdated.src = `./Memory Game/${randomNum}.png`;
+    imgTagToBeUpdated.src = `./Memory Game/${arrayofoptions}.png`;
+    //remove opption from the array
     gobalflip = true;
+    isFliped.className = 1;
   } else if ((gobalflip = true)) {
     console.log(gobalflip);
     randomNum = getRandomNum();
     let imgTagToBeUpdated = document.getElementById(Event.path[0].id);
     imgTagToBeUpdated.src = "./Memory Game/7.png";
     gobalflip = false;
+    isFliped.className = 0;
   }
 });
 
