@@ -73,7 +73,6 @@ function timerClock0() {
   if (hrs < 10) hrs = "0" + hrs;
 
   timer1.innerText = `${hrs}:${mins}:${secs}`;
-  E;
 }
 
 timerClock0(); //called the timer

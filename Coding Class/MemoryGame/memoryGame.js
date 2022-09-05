@@ -40,91 +40,107 @@ let cardDeck = [
 for (let i = 0; i < cardDeck.length; i++) {
   let sameDog = document.createElement("img");
   sameDog.src = `./Memory Game/7.png`;
+  sameDog.id = "dog" + `${i}`;
+  sameDog.class = 0;
   let imgBackCard = document.getElementById(cardDeck[i]);
   imgBackCard.append(sameDog); //////this is for the backcard
 }
 
-//https://thisinterestsme.com/hide-image-javascript/
-$(document).ready(function () {
-  $("#grid").on("click", function () {
-    $("#divB").toggle();
-  });
-});
-
-const gridB = document.getElementById("divB");
-let gameRules = true;
-gridB.addEventListener("click", (Event) => {
-  const { target } = Event;
-  console.log(event.target); //tested whether console will show i clicked on image, yes!
-  if (target.innerHTML === "") {
-    if (gameRules === true) {
-      //do i have to do embedded tru/false?
-      let doggo = document.createElement("img");
-      randomNum = getRandomNum();
-      doggo.src = `./Memory Game/${randomNum}.png`;
-      let imgDoggo = document.getElementById(cardDeck[1]);
-      imgDoggo.append(doggo);
-      gameRules = false;
-    } else {
-      $("#divB").hide(50);
-
-      //   gameRules = true;
-      // }
-      //goes back to 7png?
-      // } else {
-      // document.getElementById("divB").style.visibility = "hidden";
-      // let sameDog = document.createElement("img");
-      // sameDog.src = `./Memory Game/7.png`;
-      // let imgBackCard = document.getElementById(cardDeck[1]);
-      // imgBackCard.append(sameDog);
-      ///////////////////////////////////////////////////////////
-      //////////////////////bottom sort of works/////////////////
-      // for (let i = 0; i < 99; i++) {
-      //   if (gameRules === false) {
-      //     imgDoggo = document.getElementById(cardDeck[0]).style.display =
-      //       "none";
-      //   } else {
-      //     imgDoggo = document.getElementById(cardDeck[0]).style.display =
-      //       "inline";
-      //   }
-      // }
-      ////////////////////Keep ^^ fiddle//////////////////////////////
-      // $("#divB").hide();
-      // gameRules = true;
-    }
+let gobalflip = false;
+let grid = document.getElementById("grid");
+grid.addEventListener("click", (Event) => {
+  let isFliped = Event.path[0].class;
+  console.log(gobalflip);
+  if (gobalflip == false) {
+    console.log(Event.path[1].childNodes[0].id, Event);
+    randomNum = getRandomNum();
+    let imgTagToBeUpdated = document.getElementById(Event.path[0].id);
+    imgTagToBeUpdated.src = `./Memory Game/${randomNum}.png`;
+    gobalflip = true;
+  } else if ((gobalflip = true)) {
+    console.log(gobalflip);
+    randomNum = getRandomNum();
+    let imgTagToBeUpdated = document.getElementById(Event.path[0].id);
+    imgTagToBeUpdated.src = "./Memory Game/7.png";
+    gobalflip = false;
   }
 });
 
-$(document).ready(function () {
-  $("#grid").on("click", function () {
-    //this grid function isn't working correctly, wont allow diff click
-    $("#divA").toggle();
-  });
-});
+// const gridB = document.getElementById("divB");
+//
+// gridB.addEventListener("click", (Event) => {
+//   const { target } = Event;
+//   console.log(event.target); //tested whether console will show i clicked on image, yes!
 
-const gridA = document.getElementById("divA");
-gameRules = true;
-gridA.addEventListener("click", (Event) => {
-  const { target } = Event;
-  console.log(event.target); //tested whether console will show i clicked on image, yes!
-  if (target.innerHTML === "") {
-    if (gameRules === true) {
-      let doggo = document.createElement("img");
-      randomNum = getRandomNum();
-      doggo.src = `./Memory Game/${randomNum}.png`;
-      let imgDoggo = document.getElementById(cardDeck[0]);
-      imgDoggo.append(doggo);
-      gameRules = false; //goes back to 7png?
-    } else {
-      $("#divA").hide(50);
-      //   let sameDog = document.createElement("img");
-      //   sameDog.src = `./Memory Game/7.png`;
-      //   let imgBackCard = document.getElementById(cardDeck[1]);
-      //   imgBackCard.append(sameDog);
-      //   gameRules = true;
-    }
-  }
-});
+//   if (target.innerHTML === "") {
+//     if (gameRules === true) {
+//       //do i have to do embedded tru/false?
+//       let doggo = document.createElement("img");
+//       randomNum = getRandomNum();
+//       doggo.src = `./Memory Game/${randomNum}.png`;
+//       let imgDoggo = document.getElementById(cardDeck[1]);
+//       imgDoggo.append(doggo);
+//       gameRules = false;
+//     } else {
+//       $("#divB").hide(50);
+
+//       //   gameRules = true;
+//       // }
+//       //goes back to 7png?
+//       // } else {
+//       // document.getElementById("divB").style.visibility = "hidden";
+//       // let sameDog = document.createElement("img");
+//       // sameDog.src = `./Memory Game/7.png`;
+//       // let imgBackCard = document.getElementById(cardDeck[1]);
+//       // imgBackCard.append(sameDog);
+//       ///////////////////////////////////////////////////////////
+//       //////////////////////bottom sort of works/////////////////
+//       // for (let i = 0; i < 99; i++) {
+//       //   if (gameRules === false) {
+//       //     imgDoggo = document.getElementById(cardDeck[0]).style.display =
+//       //       "none";
+//       //   } else {
+//       //     imgDoggo = document.getElementById(cardDeck[0]).style.display =
+//       //       "inline";
+//       //   }
+//       // }
+//       ////////////////////Keep ^^ fiddle//////////////////////////////
+//       // $("#divB").hide();
+//       // gameRules = true;
+//     }
+//   }
+// });
+
+// $(document).ready(function () {
+//   $("#grid").on("click", function () {
+//     //this grid function isn't working correctly, wont allow diff click
+//     $("#divA").toggle();
+//   });
+// });
+
+// const gridA = document.getElementById("divA");
+// gameRules = true;
+// gridA.addEventListener("click", (Event) => {
+//   const { target } = Event;
+//   console.log(event.target); //tested whether console will show i clicked on image, yes!
+//   if (target.innerHTML === "") {
+//     if (gameRules === true) {
+//       let doggo = document.createElement("img");
+//       randomNum = getRandomNum();
+//       doggo.src = `./Memory Game/${randomNum}.png`;
+//       let imgDoggo = document.getElementById(cardDeck[0]);
+//       imgDoggo.append(doggo);
+//       gameRules = false; //goes back to 7png?
+//     } else {
+//       $("#divA").hide(50);
+//       //   let sameDog = document.createElement("img");
+//       //   sameDog.src = `./Memory Game/7.png`;
+//       //   let imgBackCard = document.getElementById(cardDeck[1]);
+//       //   imgBackCard.append(sameDog);
+//       //   gameRules = true;
+//     }
+//   }
+// });
 
 // const gridC = document.getElementById("divC");
 // gridC.addEventListener("click", (Event) => {
