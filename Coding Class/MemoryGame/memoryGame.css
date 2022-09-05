@@ -13,6 +13,10 @@ body {
     #f0f0f0 100%
   );
   overflow-y: hidden;
+  display: inline;
+}
+* {
+  justify-content: center;
 }
 #grid {
   display: grid;
@@ -31,23 +35,18 @@ body {
 } */
 /* (C) OPTIONAL FOR THE CELLS */
 
-.head,  /*may not need this .head*/
-.cell {
-  width: auto; /*adjusting the size of the cell only*/
-  height: auto;
-}
 /*.head {
   font-weight: bold;
   border: 1px solid #f18e8e;
   background: #ffbfbf;
 }*/
+
 .cell {
   border: 1px solid #c2ba3c;
   background: #f8ffde;
 }
-
-button {
-  outline-color: #006d77;
+cell:hover {
+  opacity: 2;
 }
 
 h1 {
@@ -57,23 +56,45 @@ h1 {
 p {
   text-align: center;
   color: rgba(0, 0, 0, 0.5);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: larger;
 }
 
 img {
   max-width: auto;
-  height: 250px;
-  max-height: 100%;
+  max-height: 200px;
 }
+
+img:hover {
+  cursor: pointer;
+}
+
+.head,  /*may not need this .head*/
+.cell {
+  width: auto; /*adjusting the size of the cell only*/
+  height: auto;
+}
+
+.memory-grid {
+  border: 1px solid #c2ba3c;
+  width: 825px;
+  height: 640px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin: auto;
+}
+
 .navitem {
   display: inline;
   width: 70px;
   height: 40px;
-  text-align: center;
   border: gray;
   background-color: #cc5e36;
   color: #fff;
   cursor: pointer;
   font-weight: bold;
+  text-align: center;
 }
 
 .flex-parent {
@@ -82,4 +103,36 @@ img {
 
 .jc-center {
   justify-content: center;
+}
+
+.button-class {
+  justify-content: center;
+}
+
+button:hover {
+  opacity: 2;
+}
+
+.resetSection {
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.watch0 {
+  text-align: center;
+  margin: 0.25rem;
+  font-size: x-large;
+}
+
+.watch1 {
+  text-align: center;
+  margin: 0.25rem;
+  font-size: x-large;
+}
+
+header {
+  font-size: x-large;
+  font-family: Impact, Haettenschweiler, "Arial Bold", sans-serif;
 }

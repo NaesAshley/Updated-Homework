@@ -5,51 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="memoryGame.css" />
-    <title>Match The Cards Memory Game</title>
+    <script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+    <title>Speeed Match Memory Game</title>
   </head>
   <section>
+    <header>
     <h1>Match the Game!</h1>
+  </header>
     <p>
       Player 1 vs player 2. Let's see who can match the game the fastest!
     </p>
     <P>
-      <section>
+    <section class="button-class">
         <div class="flex-parent jc-center">
-          <div class="timeDisplay">
-          <h5><span class="minute" >00</span>
-          <span class="seconds">00</span></h5>
+          <div class="watch0">
+          <div class="time0"> 00:00:00</div> 
           </div>  
-         
         <button Class='navitem' ID="Player1">Player 1</button>  &nbsp
+        <button id="stop0">Stop</button>
+        <button id="reset0">Reset</button>
         <br />
-        
-        <h5><span class="minute" >00</span>
-        <span class="seconds">00</span></h5>
-
+        <div class="watch1">
+          <div class="time1"> 00:00:00</div>
+          </div>  
         <button Class='navitem' ID="Player2">Player 2</button>   &nbsp
-        <br />
+        <button id="stop1">Stop</button>
+        <button id="reset1">Reset</button>
+        <br />  &nbsp  &nbsp  &nbsp
         <!--<button type="button" id="reset Button" onclick="resetFunction()">Reset The Game</button> -->
-        <button Class='navitem' onclick="location.reload();">New Game</button>
+        <!--<button Class='navitem' onclick="location.reload();">New Game</button> -->
         <br />
       </div>
       </section>
     </P>
   </section>
+  <section class="memory-grid">
   <div id="grid">
-    <div class="cell" id="divA"></div>
-    <div class="cell" id="divB"></div>
-    <div class="cell" id="divC"></div>
-    <div class="cell" id="divC">Cell C</div>
-    <div class="cell" id="divD">Cell </div>
-    <div class="cell" id="divE">Cell </div>
-    <div class="cell" id="divF">Cell F</div>
-    <div class="cell" id="divG">Cell </div>
-    <div class="cell" id="divH">Cell </div> 
-    <div class="cell" id="divI">Cell I</div>
-    <div class="cell" id="divJ">Cell J</div>
-    <div class="cell" id="divK">Cell K</div>
+    <div class="cell" class="testA" id="divA" data-square-number="0"></div>
+    <div class="cell" class="testB" id="divB" data-square-number="1"></div>
+    <div class="cell" id="divC" data-square-number="2"></div>
+    <div class="cell" id="divD" data-square-number="3"></div>
+    <div class="cell" id="divE" data-square-number="4"></div>
+    <div class="cell" id="divF" data-square-number="5"></div>
+    <div class="cell" id="divG" data-square-number="6"></div>
+    <div class="cell" id="divH" data-square-number="7"></div>
+    <div class="cell" id="divI" data-square-number="8"></div> 
+    <div class="cell" id="divJ" data-square-number="9"></div>
+    <div class="cell" id="divK" data-square-number="10"></div>
+    <div class="cell" id="divL" data-square-number="11"></div>
   </div>
+</section>
+<section class='resetSection' >
+  <div><button Class='navitem' onclick="location.reload();">New Game</button></div>
+</section>
     <script src="./memoryGame.js"></script>
     <script src="./MemoryGT.js"></script>
+    <script src="./MemoryTrack.js"></script>
   </body>
 </html>
