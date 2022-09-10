@@ -453,3 +453,76 @@ gridA.addEventListener("click", (Event) => {
 //   null,
 //   null,
 //   null,
+///////////////////////////////////////////////09/06/22 after help
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+
+function getRandomNum() {
+  return Math.floor(Math.random() * (6 - 1)) + 1; // get number 0-6
+}
+
+const matchGrid = document.querySelectorAll(".cell");
+console.log(matchGrid); // called my cells to see if they're being called -- this is a node -- need to point an index to it
+
+let cardDeck = [
+  "divA",
+  "divB",
+  "divC",
+  "divD",
+  "divE",
+  "divF",
+  "divG",
+  "divH",
+  "divI",
+  "divJ",
+  "divK",
+  "divL",
+];
+
+// for (let i = 0; i < cardDeck.length; i++) {
+//   let doggo = document.createElement("img");
+//   randomNum = getRandomNum();
+//   doggo.src = `./Memory Game/${randomNum}.png`;
+//   let imgDoggo = document.getElementById(cardDeck[i]); //equivalent to "divA/b/c"
+//   imgDoggo.append(doggo);
+// } // can put this into a function and call it to populate images.
+
+for (let i = 0; i < cardDeck.length; i++) {
+  let sameDog = document.createElement("img");
+  sameDog.src = `./Memory Game/7.png`;
+  sameDog.id = "dog" + `${i}`;
+  sameDog.class = 0;
+  let imgBackCard = document.getElementById(cardDeck[i]);
+  imgBackCard.append(sameDog); //////this is for the backcard
+}
+
+let 1 = src/ `./Memory Game/$1.png`;
+
+// let arrayofoptions = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6];
+// some way to randmize array
+let gobalflip = false;
+let grid = document.getElementById("grid");
+grid.addEventListener("click", (Event) => {
+  let isFliped = document.getElementById(Event.path[0].id);
+
+  console.log(gobalflip);
+  if (gobalflip == false) {
+    console.log(Event.path[1].childNodes[0].id, Event);
+    randomNum = getRandomNum();
+    let imgTagToBeUpdated = document.getElementById(Event.path[0].id);
+    // imgTagToBeUpdated.src = `./Memory Game/${arrayofoptions}.png`;
+    //remove option from the array
+    imgTagToBeUpdated.src = `./Memory Game/${randomNum}.png`;
+    gobalflip = true;
+    isFliped.className = 1;
+  } else if ((gobalflip = true)) {
+    console.log(gobalflip);
+    randomNum = getRandomNum();
+    let imgTagToBeUpdated = document.getElementById(Event.path[0].id);
+    imgTagToBeUpdated.src = "./Memory Game/7.png";
+    gobalflip = false;
+    isFliped.className = 0;
+  }
+});
+
+/
