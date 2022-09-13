@@ -86,9 +86,7 @@ console.log(arrayofoptionsRandomized);
  */
 
 // arrayofoptionsRandomized.forEach();
-
 /////then after randomizing array, how do you pair it to the source? with a randomization function
-
 /// after pairing it to the source, replace line 70 imgTagToBeUpdated.src = `./Memory Game/${randomNum}.png`;
 
 let gobalflip = false; // see a way if there are two flipped cards -- probably create a separate function outside of the entire if block below // replace with a function to check cards
@@ -111,9 +109,7 @@ grid.addEventListener("click", (Event) => {
     // a way to check which one is assigned to which divcell
 
     console.log(imgTagToBeUpdated);
-
     let imgTagID = imgTagToBeUpdated.id; //this is dog1,dog2,dog3,dog4 etc. ID
-
     if (gameState[`${imgTagID}`] !== undefined) {
       ///////////we want this to check if something already is there and assigned
       ////google if "key" exists in an object
@@ -133,7 +129,7 @@ grid.addEventListener("click", (Event) => {
       // this rememebers as we're playing
       imgTagToBeUpdated.src.includes("1") ||
       imgTagToBeUpdated.src.includes("2") ||
-      imgTagToBeUpdated.src.includes("3") || //we want all image info saved somehow
+      imgTagToBeUpdated.src.includes("3") || // want all image info saved somehow
       imgTagToBeUpdated.src.includes("4") ||
       imgTagToBeUpdated.src.includes("5") ||
       imgTagToBeUpdated.src.includes("6")
