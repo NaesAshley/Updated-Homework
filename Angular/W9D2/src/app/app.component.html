@@ -21,18 +21,22 @@
 <div class="grid-container">
   <header class="header">
     <div class="header__search">Search...</div>
-    <div class="header__avatar">Your face</div>
+    <div class="header__avatar">picture image?</div>
   </header>
   <aside class="sidenav">dashboard<app-dashboard></app-dashboard></aside>
   <main class="main">
     main section
     <div class="main-overview">
       <div class="overviewcard">
-        <div class="overviewcard__icon">Overview</div>
+        <div class="overviewcard__icon">
+          Overview<app-reviews></app-reviews>
+        </div>
         <div class="overviewcard__info">Card</div>
       </div>
       <div class="overviewcard">
-        <div class="overviewcard__icon">Overview</div>
+        <div class="overviewcard__icon">
+          Overview<app-website-visitors></app-website-visitors>
+        </div>
         <div class="overviewcard__info">Card</div>
       </div>
       <div class="overviewcard">
@@ -43,10 +47,12 @@
     <!--another main section with larger cards-->
     <div class="main-cards">
       <div class="card">
-        Card
+        Card<app-average-rating></app-average-rating>
         <div class="inner"></div>
       </div>
-      <div class="card">Card</div>
+      <div class="card">
+        Card<app-sentiment-analysis></app-sentiment-analysis>
+      </div>
       <div class="card">Card</div>
     </div>
   </main>
