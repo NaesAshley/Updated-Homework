@@ -1,0 +1,10 @@
+<!-- in vanilla js i loop over info and then render -->
+<!-- we'll do the same in angular just differently-->
+<!--let element of the array-->
+<ul *ngFor="let user of users">
+  <li>{{ user | json }}</li>
+  <li>{{ user.firstName }}</li>
+  <li>{{ user.sex }}</li>
+  <!--now puts the user array on screen-->
+  <!-- remember its inside user-list.components-->
+</ul>

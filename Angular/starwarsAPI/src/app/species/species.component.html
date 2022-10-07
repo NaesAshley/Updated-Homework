@@ -1,0 +1,13 @@
+<ul>
+  <li *ngFor="let speciesSingle of species">
+    <h4>{{ speciesSingle.name }}</h4>
+    <ul>
+      <li>
+        {{ speciesSingle.classification }}
+      </li>
+      <li>
+        {{ speciesSingle.eye_colors }}
+      </li>
+    </ul>
+  </li>
+</ul>

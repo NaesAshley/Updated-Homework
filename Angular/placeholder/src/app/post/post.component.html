@@ -1,0 +1,32 @@
+<p>post works!</p>
+!<!-- this div is going to be the container for the entire post-->
+<div *ngIf="chosenPost">
+  <h1>Chosen Post</h1>
+  <!--only render when we chose the post, this will render it.
+If this exists then render something on the screen-->
+  <!--  <h3>{{ chosenPost.title }}</h3>
+  <p>{{ chosenPost.body }}</p>> 
+-->
+
+  <label> Post title: <input [(ngModel)]="chosenPost.title" /> </label>
+  <label> Post body: <input [(ngModel)]="chosenPost.body" /> </label>
+  <button (click)="save(chosenPost)">Save</button>
+  <!--used to be able to edit ==== "import angular form"-->
+</div>
+
+<!-- this div is going to be the container for the entire post-->
+<div class="post" *ngFor="let post of posts">
+  <!--got this from import api reference for angular in website-->
+  <!-- we did class="posts" because we want to later stype the post card in css through this class-->
+  <mat-card>
+    <mat-card-subtitle>Post id - {{ post.id }}</mat-card-subtitle>
+    <mat-card-title>{{ post.title }}</mat-card-title>
+    <mat-card-content>
+      <p>{{ post.body }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="choosePost(post)">EDIT</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

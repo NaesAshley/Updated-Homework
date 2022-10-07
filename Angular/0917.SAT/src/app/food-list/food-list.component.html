@@ -1,0 +1,15 @@
+<p>food-list works!</p>
+<ul *ngFor="let food of foodList">
+  <!--do this after listing the food list components -->
+  <li (click)="chooseFood(food)">{{ food.nameOfDish }}</li>
+</ul>
+
+<!--
+  <li onclick="chooseFood{{ pizza }}">
+  <li onclick="chooseFood{{ tacos }}">
+  <li onclick="chooseFood{{ pasta }}">
+-->
+
+<div *ngIF="">
+  <h1>Food was Chosen!</h1>
+</div>
