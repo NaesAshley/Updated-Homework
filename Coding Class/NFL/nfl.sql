@@ -39,7 +39,11 @@ select name, position from players order by salary asc limit 100;
 select AVG(salary) from players where position = 'DE';
 
 -- 12. The names of all the players on the Buffalo Bills
+select name from players where team_id = '1';
 
 -- 13. The total salary of all players on the New York Giants
-                                                                                                                      
+select SUM(salary) from players where team_id = '18';    
+
 -- 14. The player with the lowest salary on the Green Bay Packers
+select name, salary from players Where team_id = '23' order by salary asc limit 1;
+select MIN(Salary) from players where team_id = '23';
