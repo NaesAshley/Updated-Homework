@@ -30,13 +30,16 @@ select name, position from players where Salary >= 10000000;
 -- HUNGRY FOR MORE!!!!!!!
 
 -- 9. The player with the highest salary in the NFL
+select name, salary from players order by salary desc limit 1;
 
 -- 10. The name and position of the first 100 players with the lowest salaries
+select name, position from players order by salary asc limit 100;
 
 -- 11. The average salary for a DE in the nfl
+select AVG(salary) from players where position = 'DE';
 
 -- 12. The names of all the players on the Buffalo Bills
-                                                                                                                      
+
 -- 13. The total salary of all players on the New York Giants
                                                                                                                       
 -- 14. The player with the lowest salary on the Green Bay Packers
