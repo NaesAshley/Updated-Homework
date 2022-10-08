@@ -17,10 +17,13 @@ select count(*) from players;
 select head_coach, name from teams where (conference = 'NFC' and division = 'North') or (conference ='AFC' and division = 'East');
 
 -- 6. The 50 players with the highest salaries
+select name, salary from players order by salary desc limit 50;
 
 -- 7. The average salary of all NFL players
+Select AVG(salary) from players;
 
 -- 8. The names and positions of players with a salary above 10_000_000
+select name, position from players where Salary >= 10000000;
 
 -- "COMMIT: NFL - wow there's a lot of nfl data"
 
